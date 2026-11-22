@@ -1,0 +1,8 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>CollabSphere</title><link rel="stylesheet" href="style.css"></head>
+<body><header><h1>CollabSphere</h1><select id="userSel"><option>Ada</option><option>Bob</option><option>Cara</option></select><span id="roleBadge"></span></header>
+<main><div class="controls"><select id="projSel"></select><input id="q" placeholder="Search tasks..."><select id="fPri"><option value="">All priorities</option><option>low</option><option>medium</option><option>high</option></select><select id="fAssignee"><option value="">All assignees</option></select></div>
+<div class="board"><div class="col" data-status="todo"><h3>Todo</h3><div class="drop" data-status="todo"></div></div><div class="col" data-status="doing"><h3>Doing</h3><div class="drop" data-status="doing"></div></div><div class="col" data-status="done"><h3>Done</h3><div class="drop" data-status="done"></div></div></div>
+<section class="card"><h3>New Task</h3><input id="tTitle" placeholder="Title"><input id="tDesc" placeholder="Description"><select id="tPri"><option>low</option><option selected>medium</option><option>high</option></select><input id="tAssignee" placeholder="Assignee"><input id="tDue" type="date"><button onclick="createTask()">Add Task</button></section>
+<section class="card"><h3>Activity / Notifications</h3><ul id="activity"></ul></section>
+<section class="card"><h3>Comments</h3><select id="cTask"></select><input id="cText" placeholder="Comment..."><button onclick="addComment()">Add Comment</button><ul id="comments"></ul></section>
+</main><script src="app.js"></script></body></html>
